@@ -3,8 +3,8 @@ import uvicorn
 from src.app import get_application
 from fastapi.responses import RedirectResponse
 
-
 app = get_application()
+
 @app.get("/")
 def redirect_to_swagger():
     return RedirectResponse(url="/docs")
