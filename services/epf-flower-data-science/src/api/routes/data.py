@@ -29,3 +29,11 @@ def model_training():
 @router.get("/predictions")
 def model_predictions():
     return predict()
+
+@router.get("/firestore_parameters")
+def firestore_parameters():
+    return retreive_firestore_parameters()
+
+@router.get("/firestore_update")
+def firestore_update():
+    return update_firestore()
